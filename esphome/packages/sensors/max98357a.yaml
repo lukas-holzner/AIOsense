@@ -1,0 +1,12 @@
+i2s_audio:
+  id: i2s_out
+  i2s_lrclk_pin: "${i2s_lrclk_pin}"  # WS
+  i2s_bclk_pin: "${i2s_bclk_pin}"  # SCK
+
+media_player:
+  - platform: i2s_audio
+    i2s_audio_id: i2s_out
+    name: ESPHome I2S Media Player
+    dac_type: external
+    i2s_dout_pin: "${i2s_dout_pin}"
+    mode: stereo
